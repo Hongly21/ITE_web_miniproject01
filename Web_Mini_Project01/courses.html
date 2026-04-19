@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="ស្វែងរកវគ្គសិក្សាបច្ចេកវិទ្យា ២០០+ វគ្គ — ការអភិវឌ្ឍន៍វ៉េបសាយ, AI, វិទ្យាសាស្ត្រទិន្នន័យ, Cloud Computing និងច្រើនទៀត។">
+  <title>E-Learning-Course</title>
+  <link rel="icon" type="image/x-icon" href="images/Logo/logo.png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Moul&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="./src/input.css">
+
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- AOS (Animate On Scroll) library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- CSS-Only Filtering Styles -->
+  <style>
+    /* Show all courses by default */
+    .course-card {
+      display: block !important;
+    }
+
+    /* When filter-webdev is checked, show only webdev courses */
+    #filter-webdev:checked~section .course-card:not([data-category="webdev"]) {
+      display: none !important;
+    }
+
+    /* When filter-ai is checked, show only ai courses */
+    #filter-ai:checked~section .course-card:not([data-category="ai"]) {
+      display: none !important;
+    }
+
+    /* When filter-data is checked, show only data courses */
+    #filter-data:checked~section .course-card:not([data-category="data"]) {
+      display: none !important;
+    }
+
+    /* When filter-cloud is checked, show only cloud courses */
+    #filter-cloud:checked~section .course-card:not([data-category="cloud"]) {
+      display: none !important;
+    }
+
+    /* When filter-security is checked, show only security courses */
+    #filter-security:checked~section .course-card:not([data-category="security"]) {
+      display: none !important;
+    }
+  </style>
+
+</head>
+
+<body class="bg-white  text-slate-800 font-sans transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center font-bold"><i data-lucide="code-2"
+              class="w-6 h-6 font-bold text-slate-900"></i></div>
+          <span class="text-xl font-bold text-slate-900">E-Learning</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំព័រដើម</a>
+          <a href="courses.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">វគ្គសិក្សា</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">អំពីយើង</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំនាក់ទំនង</a>
+
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="p-2 rounded-lg hover:bg-slate-100 transition-colors dark:hover:bg-slate-800"
+            aria-label="បិទបើកមុខងារងងឹត">
+            <i data-lucide="moon" class="w-6 h-6 theme-icon-moon text-slate-600 dark:text-slate-300"></i>
+            <i data-lucide="sun" class="w-6 h-6 theme-icon-sun hidden text-slate-600 dark:text-slate-300"></i>
+          </button>
+          <a href="courses.html"
+            class="hidden md:inline-block bg-indigo-600 text-white text-sm font-medium py-2 px-5 rounded-lg hover:bg-indigo-700 transition-colors">
+            ចាប់ផ្តើម
+          </a>
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
+            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6 text-slate-600"></i>
+            <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden text-slate-600"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu"
+    class="hidden fixed top-16 left-0 right-0 bg-white border-b border-slate-100 shadow-lg md:hidden z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំព័រដើម</a>
+        <a href="courses.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">វគ្គសិក្សា</a>
+        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">អំពីយើង</a>
+        <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំនាក់ទំនង</a>
+        <a href="courses.html"
+          class="bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-lg text-center hover:bg-indigo-700 transition-colors">ចាប់ផ្តើម</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="pt-28 pb-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 ">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal animate__animated animate__fadeInDown">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-slate-600">ស្វែងរកវគ្គសិក្សារបស់យើង</h1>
+        <p class="text-lg text-slate-700 max-w-2xl mx-auto">រកឃើញវគ្គសិក្សា ២០០+ វគ្គ
+          ដែលរចនាឡើងដើម្បីជួយអ្នកឱ្យធ្វើជាម្ចាស់ជំនាញបច្ចេកវិទ្យាតាមតម្រូវការ។</p>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER -->
+    <section class="sticky top-16 z-40 bg-white/95  backdrop-blur-md border-b border-slate-200 py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div class="relative w-full md:w-80 text-slate-900">
+            <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-800"></i>
+            <input type="text" placeholder="ស្វែងរកវគ្គសិក្សា..."
+              class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-slate-300 bg-white  text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+          </div>
+          <!-- Hidden Radio Buttons for CSS-only Filtering -->
+          <input type="radio" id="filter-all" name="course-filter" value="all" class="hidden" checked>
+          <input type="radio" id="filter-webdev" name="course-filter" value="webdev" class="hidden">
+          <input type="radio" id="filter-ai" name="course-filter" value="ai" class="hidden">
+          <input type="radio" id="filter-data" name="course-filter" value="data" class="hidden">
+          <input type="radio" id="filter-cloud" name="course-filter" value="cloud" class="hidden">
+          <input type="radio" id="filter-security" name="course-filter" value="security" class="hidden">
+
+          <div class="flex flex-wrap gap-2">
+            <label for="filter-all"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium bg-indigo-600 text-white transition-all hover:bg-indigo-700">ទាំងអស់</label>
+            <label for="filter-webdev"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium text-slate-900 hover:bg-slate-100 transition-all">ការអភិវឌ្ឍន៍វ៉េបសាយ</label>
+            <label for="filter-ai"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium text-slate-900 hover:bg-slate-100 transition-all">AI
+              / ML</label>
+            <label for="filter-data"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium text-slate-900 hover:bg-slate-100 transition-all">វិទ្យាសាស្ត្រទិន្នន័យ</label>
+            <label for="filter-cloud"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium text-slate-900 hover:bg-slate-100 transition-all">Cloud</label>
+            <label for="filter-security"
+              class="filter-btn cursor-pointer px-4 py-2 rounded-lg text-sm font-medium text-slate-900 hover:bg-slate-100 transition-all">Security</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSE  -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="courseGrid" class="course-section grid sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+          <!-- Course 1 -->
+          <a href="course-detail.html" class="block course-card animate__animated animate__fadeInUp"
+            data-category="webdev" data-title="Full-Stack Web Development Bootcamp វគ្គបណ្តុះបណ្តាល" data-aos="zoom-in">
+            <article
+              class="card-hover bg-white  rounded-2xl overflow-hidden border border-slate-200 h-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <div class="h-48 flex items-center justify-center relative">
+                <img src="images/course/fullstack.png" class="w-full h-full object-cover" alt="full-stack-training">
+                <span
+                  class="absolute top-3 right-3 bg-white/20 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">លក់ដាច់បំផុត</span>
+              </div>
+              <div class="p-6 ">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-blue-100  text-blue-600 ">វ៉េបសាយ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៤២ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-slate-700">វគ្គបណ្តុះបណ្តាល Full-Stack Web Development</h3>
+                <p class="text-sm text-slate-600 mb-4">ធ្វើជាម្ចាស់ HTML, CSS, JavaScript, React,
+                  Node.js និង MongoDB។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.9
+                    (២,៣៤០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">
+                      SD</div><span class="text-sm font-medium text-slate-700">Sarah Davis</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$49.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 2 -->
+          <a href="course-detail.html" class="block course-card animate__animated animate__fadeInUp animate__delay-1s"
+            data-category="webdev" data-title="React & Next.js Masterclass" data-aos="zoom-in" data-aos-delay="100">
+            <article
+              class="card-hover bg-white  rounded-2xl overflow-hidden border border-slate-200  h-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <div class="h-48 bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
+                <img class="w-full h-full object-cover" src="images/course/react.png" alt="ReactHooks">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-blue-100 text-blue-600 ">វ៉េបសាយ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣០ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">វគ្គជំនាញ React និង Next.js</h3>
+                <p class="text-sm text-slate-600  mb-4">បង្កើតកម្មវិធីវ៉េបទំនើបជាមួយ React hooks,
+                  SSR, API routes និងបច្ចេកទេសថ្មី។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.8
+                    (១,៩២០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">
+                      MJ</div><span class="text-sm font-medium">Mike Johnson</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$39.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 3 -->
+          <a href="course-detail.html" class="block course-card" data-category="webdev"
+            data-title="Node.js Backend Development">
+            <article class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 h-full">
+              <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                <img class="w-full h-full object-cover" src="images/course/restfull.png" alt="restfull">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-green-100 text-green-600">វ៉េបសាយ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">២៨ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">ការអភិវឌ្ឍន៍ Backend ជាមួយ Node.js</h3>
+                <p class="text-sm text-slate-600  mb-4">បង្កើត RESTful APIs, GraphQL servers និង
+                  microservices ជាមួយ Express និង Node.js។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★☆</div><span class="text-sm text-slate-500">4.7
+                    (១,៤៦០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs font-bold text-green-600">
+                      LW</div><span class="text-sm font-medium">Lisa Wang</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$34.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 4 -->
+          <a href="course-detail.html" class="block course-card" data-category="ai"
+            data-title="Machine Learning AI មូលដ្ឋានគ្រឹះ">
+            <article class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 h-full">
+              <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative">
+                <img src="images/course/aiml.png" class="w-full h-full object-cover" alt="ai ml">
+                <span
+                  class="absolute top-3 right-3 bg-white/20 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">ពេញនិយម</span>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-purple-100  text-purple-600 ">AI
+                    / ML</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣៨ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">មូលដ្ឋានគ្រឹះ Machine Learning និង AI</h3>
+                <p class="text-sm text-slate-600  mb-4">រៀន algorithm, neural networks និង deep
+                  learning ជាមួយ Python និង TensorFlow។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.8
+                    (១,៨៧០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">
+                      JC</div><span class="text-sm font-medium">James Chen</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$59.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 5 -->
+          <a href="course-detail.html" class="block course-card" data-category="ai"
+            data-title="Deep Learning Natural Language Processing NLP">
+            <article class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 0 h-full">
+              <div class="h-48 bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center">
+                <img src="images/course/deeplearing.png" class="w-full h-full object-cover" alt="deep learning">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-violet-100  text-violet-600 ">AI
+                    / ML</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣៤ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Deep Learning និង NLP</h3>
+                <p class="text-sm text-slate-600  mb-4">ធ្វើជាម្ចាស់ neural networks, transformers
+                  និង NLP ជាមួយ PyTorch និង Hugging Face។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.9
+                    (១,១៥០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-violet-100 flex items-center justify-center text-xs font-bold text-violet-600">
+                      RG</div><span class="text-sm font-medium">Rachel Green</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$54.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 6 -->
+          <a href="course-detail.html" class="block course-card" data-category="data"
+            data-title="Data Science Python SQL វិទ្យាសាស្ត្រទិន្នន័យ">
+            <article class="card-hover bg-white  rounded-2xl overflow-hidden border border-slate-200 h-full">
+              <div class="h-48 bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center relative">
+                <img src="images/course/datascrience.png" class="w-full h-full object-cover" alt=" data science"> <span
+                  class="absolute top-3 right-3 bg-white/20 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">ថ្មី</span>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="text-xs font-medium px-2 py-1 rounded bg-cyan-100  text-cyan-600 ">វិទ្យាសាស្ត្រទិន្នន័យ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣៥ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">វិទ្យាសាស្ត្រទិន្នន័យជាមួយ Python និង SQL</h3>
+                <p class="text-sm text-slate-600  mb-4">ធ្វើជាម្ចាស់ការវិភាគទិន្នន័យ ការបង្ហាញ
+                  និងគំរូស្ថិតិដោយប្រើ Python, Pandas និង Tableau។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★☆</div><span class="text-sm text-slate-500">4.7
+                    (១,៥៤០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-cyan-100  flex items-center justify-center text-xs font-bold text-cyan-600">
+                      EM</div><span class="text-sm font-medium">Elena Martinez</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$44.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 7 -->
+          <a href="course-detail.html" class="block course-card" data-category="data"
+            data-title="Business Intelligence Power BI Tableau ការវិភាគទិន្នន័យ">
+            <article class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 h-full">
+              <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-700 flex items-center justify-center">
+                <img src="images/course/powerbi.png" class="w-full h-full object-cover" alt="power bi">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="text-xs font-medium px-2 py-1 rounded bg-teal-100  text-teal-600 ">វិទ្យាសាស្ត្រទិន្នន័យ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">២៥ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Business Intelligence ជាមួយ Power BI និង Tableau</h3>
+                <p class="text-sm text-slate-600 mb-4">បង្កើត dashboard អន្តរកម្ម
+                  និងបម្លែងទិន្នន័យឆៅទៅជាការយល់ដឹងដែលអាចអនុវត្តបាន។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★☆</div><span class="text-sm text-slate-500">4.6
+                    (៩៨០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-teal-100  flex items-center justify-center text-xs font-bold text-teal-600">
+                      TN</div><span class="text-sm font-medium">Tom Nguyen</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$29.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 8 -->
+          <a href="course-detail.html" class="block course-card" data-category="cloud"
+            data-title="AWS Cloud Architecture Cloud Computing">
+            <article class="card-hover bg-white  rounded-2xl overflow-hidden border border-slate-200  h-full">
+              <div class="h-48 bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center">
+                <img src="images/course/aws.png" alt="cloud" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-orange-100  text-orange-600">Cloud</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣២ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">ស្ថាបត្យកម្ម AWS Cloud</h3>
+                <p class="text-sm text-slate-600  mb-4">ធ្វើជាម្ចាស់ AWS services ការរចនា cloud
+                  architecture និងត្រៀមសម្រាប់ AWS Certification។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.8
+                    (១,៣២០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-xs font-bold text-orange-600">
+                      KR</div><span class="text-sm font-medium">Kevin Ross</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$49.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Course 9 -->
+          <a href="course-detail.html" class="block course-card" data-category="security"
+            data-title="Cybersecurity Ethical Hacking សន្តិសុខតាមប្រព័ន្ធ">
+            <article class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 h-full">
+              <div class="h-48 bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center">
+                <img src="images/course/cyber.png" class="w-full h-full object-cover" alt="cyber">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium px-2 py-1 rounded bg-red-100  text-red-600 ">សន្តិសុខ</span>
+                  <span class="text-xs text-slate-500">•</span><span class="text-xs text-slate-500">៣៦ ម៉ោង</span>
+                </div>
+                <h3 class="text-lg font-bold mb-2">សន្តិសុខតាមប្រព័ន្ធ និង Ethical Hacking</h3>
+                <p class="text-sm text-slate-600  mb-4">រៀន penetration testing, សន្តិសុខបណ្តាញ និង
+                  ethical hacking ជាមួយឧបករណ៍ និងបច្ចេកទេសជាក់ស្តែង។</p>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex text-amber-400 text-sm">★★★★★</div><span class="text-sm text-slate-500">4.9
+                    (១,៦៨០)</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-slate-200 ">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-8 h-8 rounded-full bg-red-100  flex items-center justify-center text-xs font-bold text-red-600">
+                      AH</div><span class="text-sm font-medium">Anna Hayes</span>
+                  </div>
+                  <span class="text-lg font-bold text-indigo-500">$54.99</span>
+                </div>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING PATHS -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <span
+            class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium mb-4">ផ្លូវសិក្សា</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-slate-700">ជ្រើសរើសផ្លូវអាជីពរបស់អ្នក</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto ">កម្មវិធីសិក្សាដែលរៀបចំដោយមានរចនាសម្ព័ន្ធ
+            ដើម្បីនាំអ្នកពីកម្រិតដំបូងទៅវិជ្ជាជីវៈ។</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 stagger-children">
+          <div class="bg-white  rounded-2xl p-8 border border-slate-200  card-hover text-center">
+            <div
+              class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-6">
+              <i data-lucide="globe" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-700">Full-Stack Developer</h3>
+            <p class="text-sm text-slate-700  mb-4 ">ធ្វើជាម្ចាស់ frontend និង backend development
+              ដើម្បីបង្កើតកម្មវិធីវ៉េបពេញលេញ។</p>
+            <p class="text-xs text-slate-600 ">៥ វគ្គសិក្សា • ១២០+ ម៉ោង</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-slate-200 card-hover text-center">
+            <div
+              class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6">
+              <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">AI / ML Engineer</h3>
+            <p class="text-sm text-slate-600 mb-4">បង្កើតប្រព័ន្ធ intelligent systems ដោយប្រើ
+              machine learning និង deep learning។</p>
+            <p class="text-xs text-slate-500 ">៤ វគ្គសិក្សា • ១០០+ ម៉ោង</p>
+          </div>
+          <div class="bg-white  rounded-2xl p-8 border border-slate-200  card-hover text-center">
+            <div
+              class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center mb-6">
+              <i data-lucide="database" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Data Analyst / Scientist</h3>
+            <p class="text-sm text-slate-600  mb-4">វិភាគ និងបង្ហាញទិន្នន័យ
+              ដើម្បីជំរុញការសម្រេចចិត្តអាជីវកម្មដែលមានមូលដ្ឋាន។</p>
+            <p class="text-xs text-slate-500 ">៤ វគ្គសិក្សា • ៩០+ ម៉ោង</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center"><i data-lucide="code-2"
+                class="w-5 h-5 text-white"></i></div><span class="text-xl font-bold text-white">E-Learning</span>
+          </a>
+          <p class="text-sm leading-relaxed mb-4">
+            ផ្តល់អំណាចដល់មនុស្សជំនាន់ក្រោយនៃទេពកោសល្យបច្ចេកវិទ្យាតាមរយៈការអប់រំអនឡាញពិភពលោក។</p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Community">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Code">
+              <i data-lucide="git-branch" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Phone">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">តំណភ្ជាប់រហ័ស</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-indigo-400 transition-colors">ទំព័រដើម</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">វគ្គសិក្សា</a></li>
+            <li><a href="about.html" class="hover:text-indigo-400 transition-colors">អំពីយើង</a></li>
+            <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">ទំនាក់ទំនង</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">ប្រភេទនៃវគ្គសិក្សា</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">ការអភិវឌ្ឍន៍វ៉េបសាយ</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AI និង Machine Learning</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">វិទ្យាសាស្ត្រទិន្នន័យ</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">Cloud Computing</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">សន្តិសុខតាមប្រព័ន្ធ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">ទទួលបានព័ត៌មានថ្មី</h4>
+          <p class="text-sm mb-4">ចុះឈ្មោះទទួលព័ត៌មានថ្មីៗអំពីវគ្គសិក្សា និងការយល់ដឹងបច្ចេកវិទ្យា។</p>
+          <form class="flex gap-2">
+            <input type="email" placeholder="អ៊ីមែលរបស់អ្នក"
+              class="flex-1 px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+            <button type="submit"
+              class="py-2 rounded-lg gradient-bg text-white text-sm font-medium hover:opacity-90 transition-opacity">ចុះឈ្មោះ</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+        <p>&copy; 2026 E-Learning។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-indigo-400 transition-colors">គោលការណ៍ភាពឯកជន</a>
+          <a href="#" class="hover:text-indigo-400 transition-colors">លក្ខខណ្ឌសេវាកម្ម</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- AOS (Animate On Scroll) initialization -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out'
+    });
+  </script>
+
+  <!-- Dark Mode Script -->
+  <script src="./src/dark-mode.js"></script>
+</body>
+
+</html>

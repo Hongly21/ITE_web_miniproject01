@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ទំនាក់ទំនង អំពី E-Learning - សូមទាក់ទងក្រុមការងាររបស់យើង។">
+  <title>E-Learning-Contact</title>
+  <link rel="icon" type="image/x-icon" href="images/Logo/logo.png">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Moul&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="./src/input.css">
+
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- AOS (Animate On Scroll) library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body class="bg-white text-slate-800 font-sans transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center font-bold"><i data-lucide="code-2"
+              class="w-6 h-6 font-bold text-slate-900"></i></div>
+          <span class="text-xl font-bold text-slate-900">E-Learning</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំព័រដើម</a>
+          <a href="courses.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">វគ្គសិក្សា</a>
+          <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">អំពីយើង</a>
+          <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំនាក់ទំនង</a>
+
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="p-2 rounded-lg hover:bg-slate-100 transition-colors dark:hover:bg-slate-800"
+            aria-label="បិទបើកមុខងារងងឹត">
+            <i data-lucide="moon" class="w-6 h-6 theme-icon-moon text-slate-600 dark:text-slate-300"></i>
+            <i data-lucide="sun" class="w-6 h-6 theme-icon-sun hidden text-slate-600 dark:text-slate-300"></i>
+          </button>
+          <a href="courses.html"
+            class="hidden md:inline-block bg-indigo-600 text-white text-sm font-medium py-2 px-5 rounded-lg hover:bg-indigo-700 transition-colors">
+            ចាប់ផ្តើម
+          </a>
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
+            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6 text-slate-600"></i>
+            <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden text-slate-600"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu"
+    class="hidden fixed top-16 left-0 right-0 bg-white border-b border-slate-100 shadow-lg md:hidden z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំព័រដើម</a>
+        <a href="courses.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">វគ្គសិក្សា</a>
+        <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">អំពីយើង</a>
+        <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំនាក់ទំនង</a>
+        <a href="courses.html"
+          class="bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-lg text-center hover:bg-indigo-700 transition-colors">ចាប់ផ្តើម</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="pt-28 pb-12 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal animate__animated animate__fadeInDown">
+        <span
+          class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-600 text-sm font-medium mb-4">ទំនាក់ទំនង</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-slate-700">ទាក់ទងមកយើង</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">មានសំណួរ មតិយោបល់ ឬសំណើភាពជាដៃគូ?
+          យើងរីករាយស្តាប់។ បំពេញទម្រង់ ឬទាក់ទងតាមបណ្តាញណាមួយរបស់យើង។</p>
+      </div>
+    </section>
+
+    <!-- CONTACT CARDS -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-slate-200 text-center animate__animated animate__fadeInUp hover:shadow-lg hover:scale-105 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-indigo-100  flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="mail" class="w-6 h-6 text-indigo-500"></i>
+            </div>
+            <h3 class="font-bold mb-1">អ៊ីមែល</h3>
+            <p class="text-sm text-slate-600">hongly@elearning.com</p>
+            <p class="text-sm text-slate-600">support@elearning.com</p>
+          </div>
+          <div
+            class="card-hover bg-white  rounded-2xl p-6 border border-slate-200  text-center animate__animated animate__fadeInUp animate__delay-1s hover:shadow-lg hover:scale-105 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="phone" class="w-6 h-6 text-purple-500"></i>
+            </div>
+            <h3 class="font-bold mb-1">ទូរសព្ទ</h3>
+            <p class="text-sm text-slate-600 ">+885 965429290</p>
+            <p class="text-sm text-slate-600 ">ចន្ទ-សុក្រ, 9am-6pm </p>
+          </div>
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-slate-200  text-center animate__animated animate__fadeInUp animate__delay-2s hover:shadow-lg hover:scale-105 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="map-pin" class="w-6 h-6 text-cyan-500"></i>
+            </div>
+            <h3 class="font-bold mb-1">ការិយាល័យ</h3>
+            <p class="text-sm text-slate-600 ">123 Phnom Penh</p>
+            <p class="text-sm text-slate-600 ">Phnom Penh, CA 94105</p>
+          </div>
+          <div class="card-hover bg-white  rounded-2xl p-6 border border-slate-200  text-center">
+            <div class="w-14 h-14 rounded-2xl bg-pink-100  flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="share-2" class="w-6 h-6 text-pink-500"></i>
+            </div>
+            <h3 class="font-bold mb-1">តាមដានយើង</h3>
+            <div class="flex justify-center gap-3 mt-2">
+              <a href="#"
+                class="w-8 h-8 rounded-lg bg-slate-100  flex items-center justify-center hover:bg-indigo-100  transition-colors"
+                aria-label="Email"><i data-lucide="mail" class="w-4 h-4 text-slate-600 "></i></a>
+              <a href="#"
+                class="w-8 h-8 rounded-lg bg-slate-100  flex items-center justify-center hover:bg-indigo-100  transition-colors"
+                aria-label="Phone"><i data-lucide="phone" class="w-4 h-4 text-slate-600 "></i></a>
+              <a href="#"
+                class="w-8 h-8 rounded-lg bg-slate-100  flex items-center justify-center hover:bg-indigo-100  transition-colors"
+                aria-label="Community"><i data-lucide="users" class="w-4 h-4 text-slate-600 "></i></a>
+              <a href="#"
+                class="w-8 h-8 rounded-lg bg-slate-100  flex items-center justify-center hover:bg-indigo-100  transition-colors"
+                aria-label="Git-Branch"><i data-lucide="git-branch" class="w-4 h-4 text-slate-600 "></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM  -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Form -->
+          <div class="reveal-left">
+            <h2 class="text-2xl font-bold mb-2">ផ្ញើសារមកយើង</h2>
+            <p class="text-slate-600 mb-8">បំពេញទម្រង់ខាងក្រោម ហើយយើងនឹងឆ្លើយតបក្នុងរយៈពេល ២៤ ម៉ោង។
+            </p>
+
+            <form id="contactForm" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium mb-1.5">នាមខ្លួន <span
+                      class="text-red-500">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required placeholder="Hongly"
+                    class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-shadow">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium mb-1.5">នាមត្រកូល <span
+                      class="text-red-500">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required placeholder="Boun"
+                    class="w-full px-4 py-3 rounded-xl bg-white border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-shadow">
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium mb-1.5">អ៊ីមែល <span
+                    class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="hongly@email.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white  border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-shadow">
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium mb-1.5">ប្រធានបទ <span
+                    class="text-red-500">*</span></label>
+                <select id="subject" name="subject" required
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-shadow">
+                  <option value="" disabled selected>ជ្រើសរើសប្រធានបទ</option>
+                  <option value="general">សំណួរទូទៅ</option>
+                  <option value="support">ជំនួយបច្ចេកទេស</option>
+                  <option value="billing">សំណួរអំពីការបង់ប្រាក់</option>
+                  <option value="partnership">ភាពជាដៃគូ / អាជីវកម្ម</option>
+                  <option value="feedback">មតិយោបល់ / ការផ្តល់យោបល់</option>
+                  <option value="other">ផ្សេងៗ</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium mb-1.5">សារ <span
+                    class="text-red-500">*</span></label>
+                <textarea id="message" name="message" required rows="5" placeholder="ប្រាប់យើងពីរបៀបដែលយើងអាចជួយ..."
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-shadow resize-none"></textarea>
+              </div>
+
+              <button type="submit"
+                class=" bg-indigo-600 hover:bg-indigo-700 w-full text-center py-3 text-base flex items-center justify-center gap-2 text-white ">
+                <i data-lucide="send" class="w-5 h-5"></i> ផ្ញើសារ
+              </button>
+            </form>
+          </div>
+
+          <!-- Map + FAQ -->
+          <div class="reveal-right">
+            <div class="bg-white  rounded-2xl p-6 border border-slate-200 ">
+              <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <i data-lucide="help-circle" class="w-5 h-5 text-indigo-500"></i>
+                សំណួរដែលគេសួរញឹកញាប់
+              </h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-sm mb-1">តើខ្ញុំនឹងទទួលបានការឆ្លើយតបលឿនប៉ុណ្ណា?</h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">យើងឆ្លើយតបក្នុងរយៈពេល ២៤ ម៉ោងក្នុងថ្ងៃធ្វើការ។
+                    បញ្ហាបន្ទាន់ត្រូវបានផ្តល់អាទិភាព។</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm mb-1">តើខ្ញុំអាចសុំសងប្រាក់វិញបានទេ?</h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">បាន! យើងផ្តល់ការធានាសងប្រាក់វិញ ៣០
+                    ថ្ងៃលើវគ្គសិក្សាទាំងអស់។</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm mb-1">តើមានគម្រោងសម្រាប់ក្រុម ឬសហគ្រាសទេ?</h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">ពិតជាមាន។ ទាក់ទងយើងសម្រាប់តម្លៃសហគ្រាស
+                    និងការគាំទ្រក្រុម។</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm mb-1">តើខ្ញុំអាចក្លាយជាគ្រូបង្រៀនបានយ៉ាងដូចម្តេច?</h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">យើងស្វែងរកអ្នកអប់រំដែលមានទេពកោសល្យជានិច្ច។
+                    ផ្ញើសំណើរបស់អ្នកមកតាមទម្រង់ ឬអ៊ីមែល។</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center"><i data-lucide="code-2"
+                class="w-5 h-5 text-white"></i></div><span class="text-xl font-bold text-white">E-Learning</span>
+          </a>
+          <p class="text-sm leading-relaxed mb-4">
+            ផ្តល់អំណាចដល់មនុស្សជំនាន់ក្រោយនៃទេពកោសល្យបច្ចេកវិទ្យាតាមរយៈការអប់រំអនឡាញពិភពលោក។</p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Community">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Code">
+              <i data-lucide="git-branch" class="w-4 h-4"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Phone">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">តំណភ្ជាប់រហ័ស</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-indigo-400 transition-colors">ទំព័រដើម</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">វគ្គសិក្សា</a></li>
+            <li><a href="about.html" class="hover:text-indigo-400 transition-colors">អំពីយើង</a></li>
+            <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">ទំនាក់ទំនង</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">ប្រភេទនៃវគ្គសិក្សា</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">ការអភិវឌ្ឍន៍វ៉េបសាយ</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AI និង Machine Learning</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">វិទ្យាសាស្ត្រទិន្នន័យ</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">Cloud Computing</a></li>
+            <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">សន្តិសុខតាមប្រព័ន្ធ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">ទទួលបានព័ត៌មានថ្មី</h4>
+          <p class="text-sm mb-4">ចុះឈ្មោះទទួលព័ត៌មានថ្មីៗអំពីវគ្គសិក្សា និងការយល់ដឹងបច្ចេកវិទ្យា។</p>
+          <form class="flex gap-2">
+            <input type="email" placeholder="អ៊ីមែលរបស់អ្នក"
+              class="flex-1 px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+            <button type="submit"
+              class="py-2 rounded-lg gradient-bg text-white text-sm font-medium hover:opacity-90 transition-opacity">ចុះឈ្មោះ</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+        <p>&copy; 2026 E-Learning។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-indigo-400 transition-colors">គោលការណ៍ភាពឯកជន</a>
+          <a href="#" class="hover:text-indigo-400 transition-colors">លក្ខខណ្ឌសេវាកម្ម</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- AOS (Animate On Scroll) initialization -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out'
+    });
+  </script>
+
+  <!-- Dark Mode Script -->
+  <script src="./src/dark-mode.js"></script>
+
+</body>
+
+</html>

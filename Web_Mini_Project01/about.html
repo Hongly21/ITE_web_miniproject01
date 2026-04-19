@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="អំពី E-Learning - បេសកកម្មរបស់យើង ក្រុមការងារ និងផលប៉ះពាល់">
+    <title>E-Learning-AboutUs</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo/logo.png">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Moul&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <link rel="stylesheet" href="./src/input.css">
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- AOS (Animate On Scroll) library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center font-bold"><i
+                            data-lucide="code-2" class="w-6 h-6 font-bold text-slate-900"></i></div>
+                    <span class="text-xl font-bold text-slate-900">E-Learning</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំព័រដើម</a>
+                    <a href="courses.html"
+                        class="text-sm font-medium text-slate-600 hover:text-indigo-600">វគ្គសិក្សា</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600">អំពីយើង</a>
+                    <a href="contact.html"
+                        class="text-sm font-medium text-slate-600 hover:text-indigo-600">ទំនាក់ទំនង</a>
+
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button class="p-2 rounded-lg hover:bg-slate-100 transition-colors dark:hover:bg-slate-800"
+                        aria-label="បិទបើកមុខងារងងឹត">
+                        <i data-lucide="moon" class="w-6 h-6 theme-icon-moon text-slate-600 dark:text-slate-300"></i>
+                        <i data-lucide="sun"
+                            class="w-6 h-6 theme-icon-sun hidden text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    <a href="courses.html"
+                        class="hidden md:inline-block bg-indigo-600 text-white text-sm font-medium py-2 px-5 rounded-lg hover:bg-indigo-700 transition-colors">
+                        ចាប់ផ្តើម
+                    </a>
+                    <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                        <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6 text-slate-600"></i>
+                        <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden text-slate-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+        class="hidden fixed top-16 left-0 right-0 bg-white border-b border-slate-100 shadow-lg md:hidden z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំព័រដើម</a>
+                <a href="courses.html"
+                    class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">វគ្គសិក្សា</a>
+                <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">អំពីយើង</a>
+                <a href="contact.html"
+                    class="text-sm font-medium text-slate-600 hover:text-indigo-600 py-2">ទំនាក់ទំនង</a>
+                <a href="courses.html"
+                    class="bg-indigo-600 text-white text-sm font-medium py-2 px-4 rounded-lg text-center hover:bg-indigo-700 transition-colors">ចាប់ផ្តើម</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="pt-28 pb-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
+            <div class="absolute top-10 right-10 w-72 h-72 bg-indigo-300/20  rounded-full blur-3xl">
+            </div>
+            <div
+                class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal animate__animated animate__fadeInDown">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-indigo-100  text-indigo-600 text-sm font-medium mb-4">អំពីយើង</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-slate-700">ផ្តល់ដល់មនុស្សជំនាន់ក្រោយ<br
+                        class="hidden sm:block"> នៃទេពកោសល្យបច្ចេកវិទ្យា</h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    យើងជឿជាក់ថាគ្រប់គ្នាសមទទួលបានការអប់រំបច្ចេកវិទ្យាពិភពលោក។ បេសកកម្មរបស់យើងគឺកាត់បន្ថយគម្លាតជំនាญ
+                    និងបើកឱកាសអាជីព។</p>
+            </div>
+        </section>
+
+        <!-- MISSION & STORY -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="reveal-left animate__animated animate__fadeInLeft">
+                        <span
+                            class="inline-block px-4 py-1 rounded-full bg-indigo-100  text-indigo-600  text-sm font-medium mb-4">រឿងរ៉ាវរបស់យើង</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-slate-600">ពីគំនិតតូចមួយ ទៅជាវេទិកាសកល</h2>
+                        <p class="text-slate-600 mb-4">E-Learning ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ 2020
+                            ដោយក្រុមអ្នកអភិវឌ្ឍន៍ និងអ្នកអប់រំដែលឃើញគម្លាតធំក្នុងការអប់រំបច្ចេកវិទ្យាប្រកបដោយគុណភាព។</p>
+                        <p class="text-slate-600 mb-6">
+                            យើងបង្កើតវេទិកាដែលផ្សំភាពស៊ីជម្រៅនៃវគ្គសាកលវិទ្យាល័យ ជាមួយការអនុវត្តគម្រោងជាក់ស្តែង —
+                            ក្នុងតម្លៃសមរម្យ។ ថ្ងៃនេះ យើងបម្រើអ្នកសិក្សាក្នុងជាង 120 ប្រទេស។</p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 text-center">
+                                <i data-lucide="rocket" class="w-8 h-8 text-indigo-500 mx-auto mb-2"></i>
+                                <h3 class="font-semibold text-sm">ផ្តោតលើការច្នៃថ្មី</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">ទាន់សម័យជាមួយនិន្នាការ</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 text-center">
+                                <i data-lucide="heart" class="w-8 h-8 text-pink-500 mx-auto mb-2"></i>
+                                <h3 class="font-semibold text-sm">ផ្តោតលើសិស្ស</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">ជោគជ័យរបស់អ្នក =
+                                    ជោគជ័យរបស់យើង</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 text-center">
+                                <i data-lucide="globe" class="w-8 h-8 text-cyan-500 mx-auto mb-2"></i>
+                                <h3 class="font-semibold text-sm">ការឈានដល់ពិភពលោក</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">120+ ប្រទេសជុំវិញពិភពលោក</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 text-center">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-green-500 mx-auto mb-2"></i>
+                                <h3 class="font-semibold text-sm">មាតិកាគុណភាព</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                    កម្មវិធីសិក្សាពិនិត្យដោយអ្នកជំនាញ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal-right">
+                        <div class="relative">
+                            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-8 text-white">
+                                <div class="flex items-center gap-2 mb-6">
+                                    <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center"><i
+                                            data-lucide="target" class="w-5 h-5"></i></div>
+                                    <h3 class="text-xl font-bold">បេសកកម្មរបស់យើង</h3>
+                                </div>
+                                <p class="text-lg leading-relaxed text-indigo-100 mb-6">
+                                    "ធ្វើឱ្យការអប់រំបច្ចេកវិទ្យាប្រជាធិបតេយ្យ ដោយផ្តល់វគ្គសិក្សាប្រកបដោយគុណភាព ជាក់ស្តែង
+                                    និងតម្លៃសមរម្យ ដែលផ្តល់អំណាចដល់បុគ្គលម្នាក់ៗ។"</p>
+                                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/20">
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold">2020</p>
+                                        <p class="text-xs text-indigo-200">បង្កើតឡើង</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold">120+</p>
+                                        <p class="text-xs text-indigo-200">ប្រទេស</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold">50K+</p>
+                                        <p class="text-xs text-indigo-200">និស្សិតបញ្ចប់</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TEAM MEMBERS -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14 reveal">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-indigo-100  text-indigo-600  text-sm font-medium mb-4">ក្រុមការងារ</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-slate-600">Background of E-learning</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto">ក្រុមការងារចម្រុះរបស់យើងមានអ្នកអប់រំ
+                        វិស្វករ និងអ្នករចនា ដែលមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍សិក្សាល្អបំផុត។</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+                    <div class="card-hover bg-white rounded-2xl p-6 border border-slate-200 text-center">
+                        <div
+                            class="w-24 h-24 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                            <img class="rounded-2xl" src="images/image1.png" alt="">
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-700">Alex Harper</h3>
+                        <p class="text-indigo-500 text-sm font-medium mb-3">CEO និង សហស្ថាបនិក</p>
+                        <p class="text-sm text-slate-600 mb-4">អតីតប្រធានវិស្វកម្មនៅ Microsoft។
+                            បញ្ចប់ CS ពី Stanford។</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Email"><i data-lucide="mail" class="w-4 h-4 text-slate-600"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Phone"><i data-lucide="phone" class="w-4 h-4 text-slate-600"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white  rounded-2xl p-6 border border-slate-200  text-center">
+                        <div
+                            class="w-24 h-24 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                            <img class="rounded-2xl" src="images/image2.png" alt="">
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-700">Priya Rao</h3>
+                        <p class="text-indigo-500  text-sm font-medium mb-3">CTO និង សហស្ថាបនិក</p>
+                        <p class="text-sm text-slate-600  mb-4">អ្នកស្រាវជ្រាវ ML ពី MIT។
+                            បង្កើតប្រព័ន្ធ AI learning នៅ Amazon។</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Email"><i data-lucide="mail" class="w-4 h-4 text-slate-600"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Phone"><i data-lucide="phone" class="w-4 h-4 text-slate-600"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white  rounded-2xl p-6 border border-slate-200  text-center">
+                        <div
+                            class="w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                            <img class="rounded-2xl" src="images/image3.png" alt="">
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-700">David Miller</h3>
+                        <p class="text-indigo-500  text-sm font-medium mb-3">ប្រធានកម្មវិធីសិក្សា
+                        </p>
+                        <p class="text-sm text-slate-600 mb-4">បទពិសោធន៍បង្រៀន 15+ ឆ្នាំ។
+                            អតីតសាស្ត្រាចារ្យ UC Berkeley។</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Email"><i data-lucide="mail" class="w-4 h-4 text-slate-600"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Phone"><i data-lucide="phone" class="w-4 h-4 text-slate-600"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-white  rounded-2xl p-6 border border-slate-200  text-center">
+                        <div
+                            class="w-24 h-24 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                            <img class="rounded-2xl" src="images/image4.png" alt="">
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-600">Sofia Lopez</h3>
+                        <p class="text-indigo-500  text-sm font-medium mb-3">ប្រធានការរចនា</p>
+                        <p class="text-sm text-slate-600  mb-4">អ្នករចនា UX ដែលទទួលពានរង្វាន់។
+                            ដឹកនាំក្រុមរចនានៅ Airbnb និង Spotify។</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Email"><i data-lucide="mail" class="w-4 h-4 text-slate-600"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-indigo-100 transition-colors"
+                                aria-label="Phone"><i data-lucide="phone" class="w-4 h-4 text-slate-600"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUSTED BY -->
+        <section class="py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10 reveal">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-700">ទទួលការជឿទុកចិត្តពីក្រុមហ៊ុនឈានមុខ</h2>
+                    <p class="text-slate-600 ">
+                        និស្សិតបញ្ចប់របស់យើងធ្វើការនៅក្រុមហ៊ុនបច្ចេកវិទ្យាកំពូលទូទាំងពិភពលោក</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 ">
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-400"></i> Google</div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-500"> Meta</div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-500"> Amazon</div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-500"> Microsoft</div>
+                    <div class="flex items-center gap-2 text-2xl font-bold text-slate-500">Apple</div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center"><i
+                                data-lucide="code-2" class="w-5 h-5 text-white"></i></div><span
+                            class="text-xl font-bold text-white">E-Learning</span>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-4">
+                        ផ្តល់អំណាចដល់មនុស្សជំនាន់ក្រោយនៃទេពកោសល្យបច្ចេកវិទ្យាតាមរយៈការអប់រំអនឡាញពិភពលោក។</p>
+                    <div class="flex gap-3">
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+                            aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+                            aria-label="Community">
+                            <i data-lucide="users" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+                            aria-label="Code">
+                            <i data-lucide="git-branch" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+                            aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">តំណភ្ជាប់រហ័ស</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-indigo-400 transition-colors">ទំព័រដើម</a></li>
+                        <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">វគ្គសិក្សា</a></li>
+                        <li><a href="about.html" class="hover:text-indigo-400 transition-colors">អំពីយើង</a></li>
+                        <li><a href="contact.html" class="hover:text-indigo-400 transition-colors">ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">ប្រភេទនៃវគ្គសិក្សា</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="courses.html"
+                                class="hover:text-indigo-400 transition-colors">ការអភិវឌ្ឍន៍វ៉េបសាយ</a></li>
+                        <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">AI និង Machine
+                                Learning</a></li>
+                        <li><a href="courses.html"
+                                class="hover:text-indigo-400 transition-colors">វិទ្យាសាស្ត្រទិន្នន័យ</a></li>
+                        <li><a href="courses.html" class="hover:text-indigo-400 transition-colors">Cloud Computing</a>
+                        </li>
+                        <li><a href="courses.html"
+                                class="hover:text-indigo-400 transition-colors">សន្តិសុខតាមប្រព័ន្ធ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">ទទួលបានព័ត៌មានថ្មី</h4>
+                    <p class="text-sm mb-4">ចុះឈ្មោះទទួលព័ត៌មានថ្មីៗអំពីវគ្គសិក្សា និងការយល់ដឹងបច្ចេកវិទ្យា។</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="អ៊ីមែលរបស់អ្នក"
+                            class="flex-1 px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+                        <button type="submit"
+                            class="py-2 rounded-lg gradient-bg text-white text-sm font-medium hover:opacity-90 transition-opacity">ចុះឈ្មោះ</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2026 E-Learning។ រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-indigo-400 transition-colors">គោលការណ៍ភាពឯកជន</a>
+                    <a href="#" class="hover:text-indigo-400 transition-colors">លក្ខខណ្ឌសេវាកម្ម</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- AOS (Animate On Scroll) initialization -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+    </script>
+
+    <!-- Dark Mode Script -->
+    <script src="./src/dark-mode.js"></script>
+</body>
+
+</html>
